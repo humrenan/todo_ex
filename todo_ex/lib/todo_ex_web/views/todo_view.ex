@@ -16,4 +16,14 @@ defmodule TodoExWeb.TodosView do
       inserted_at: inserted_at
     }
   end
+
+  def render("list.json", %{todos: [todos]}) do
+    %{todos: render_many(todos, __MODULE__, "todos.json")}
+  end
+
+  def render("todos.json", %{
+        todos: %Todo{description: description, state: state, id: id}
+      }) do
+    %{todo: description, done?: state, id: id}
+  end
 end
