@@ -1,6 +1,6 @@
 # TodoEx  (WIP)
 
-Todo API conaining basic CRUD operations
+Todo API containing basic CRUD operations
 
 
 # setup
