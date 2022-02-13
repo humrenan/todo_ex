@@ -1,6 +1,6 @@
-defmodule TodoEx.Inputs.Todo do
+defmodule TodoEx.Schemas.Todo do
   @moduledoc """
-  Input parameters for create todos
+
   """
   use Ecto.Schema
   import Ecto.Changeset
@@ -10,7 +10,7 @@ defmodule TodoEx.Inputs.Todo do
 
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
-  schema "todo" do
+  schema "todos" do
     field :description, :string
     field :state, :boolean, default: false
 

@@ -2,7 +2,7 @@ defmodule TodoEx.List do
   @moduledoc """
   todo: add nice doc
   """
-  alias TodoEx.Inputs.Todo
+  alias TodoEx.Schemas.Todo
   alias TodoEx.Repo
 
   def execute() do
