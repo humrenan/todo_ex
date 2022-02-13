@@ -9,6 +9,7 @@ defmodule TodoExWeb.Router do
     pipe_through :api
 
     post "/todos/create", TodosController, :create
+    get "/todos/list", TodosController, :list
   end
 
   # Enables LiveDashboard only for development

@@ -15,4 +15,12 @@ defmodule TodoExWeb.TodosController do
       |> render("create.json", todo: todo)
     end
   end
+
+  def list(conn, _params) do
+    with {:ok, todos} <- TodoEx.list() do
+      conn
+      |> put_status(200)
+      |> render("list.json", todos: todos)
+    end
+  end
 end

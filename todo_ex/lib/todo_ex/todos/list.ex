@@ -1,11 +1,13 @@
 defmodule TodoEx.List do
   @moduledoc """
-  todo: add nice doc
+  List todos
   """
   alias TodoEx.Schemas.Todo
   alias TodoEx.Repo
 
   def execute() do
-    Todo |> Repo.all()
+    todos = Todo |> Repo.all()
+
+    {:ok, [todos]}
   end
 end
