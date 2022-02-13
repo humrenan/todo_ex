@@ -13,10 +13,6 @@ defmodule TodoExWeb.TodosController do
       conn
       |> put_status(200)
       |> render("create.json", todo: todo)
-
-     end
-    
-
-     
+    end
   end
 end
