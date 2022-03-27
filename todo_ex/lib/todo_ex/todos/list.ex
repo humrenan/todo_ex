@@ -8,6 +8,6 @@ defmodule TodoEx.List do
   def execute() do
     todos = Todo |> Repo.all()
 
-    {:ok, [todos]}
+    {:ok, todos}
   end
 end

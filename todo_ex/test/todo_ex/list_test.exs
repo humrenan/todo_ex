@@ -4,11 +4,11 @@ defmodule TodoEx.ListTest do
 
   test "succeeds listing todos" do
     todos =
-      Enum.map([1, 2, 3, 4, 5], fn num ->
-        TodoEx.create_todo(%Create{description: "todo_#{num}"})
+      Enum.map(1..5, fn num ->
+        TodoEx.create_todo(%Create{description: "todo-#{num}"})
       end)
 
-    resp = TodoEx.list()
+    {:ok, resp} = TodoEx.list()
     assert length(todos) == length(resp)
   end
 end
